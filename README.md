@@ -1,6 +1,6 @@
-# Main_Page_Brand_shopping
+# Main Page Brand Shopping
 
-_Pagina principal de una tienda de artidulos de marca, diseñada bajo el concepto de mobile first, haciendo uso de pre-procesadores. Respetando los diferentes tamaños de cada dispositivo.
+_Pagina principal de una tienda de artidulos de marca, diseñada bajo el concepto de mobile first, haciendo uso de pre-procesadores. Respetando los diferentes tamaños de cada dispositivo._
 
 ## Construido con 🛠️
 
