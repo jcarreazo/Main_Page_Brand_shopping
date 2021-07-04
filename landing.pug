@@ -1,5 +1,5 @@
 mixin box-icon(name,color)
-    box-icon(name=name color=color size="25px")&attributes(attributes)
+    box-icon(name=name color=color size="28px")&attributes(attributes)
 
 doctype doctype html
 html(lang="en")
@@ -16,16 +16,24 @@ html(lang="en")
         header
             .header__container 
                 .menu  
-                    +box-icon("menu","white")
+                    +box-icon("menu","white")(size="35px")
+                    +box-icon("search","white")
                 .logo
                     img(src="/img/Logo.svg", alt="logo", srcset="")
                     span.logo__name EXA
-                .searching
-                    +box-icon("search","white")
+                .bag
+                    +box-icon("user","white")
                     +box-icon("shopping-bag-alt","white")(type="solid")
-                    
     main 
         .nuevos-productos
+            .main-new-product
+            .info-new-product 
+                .text-new-product
+                    span DX VINTAGE'S 41MM
+                    span Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est ipsa corporis.
+                .buttom-new-product
+                    button GET YOURS
+
         .articulos
         .oferta 
         .contacto

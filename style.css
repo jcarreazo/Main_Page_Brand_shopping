@@ -1,25 +1,95 @@
+:root{
+    --primary-color:#ed1c25;
+}
+
 *{
 padding: 0;
 margin: 0;
 font-family: "Montserrat", "san-serif";
 }
 .logo>img{
-    height: 2.3rem;
+    height: 2rem;
     padding: 0 5px 0 0;
 }
 .logo{
     display: flex;
     align-items: center;
+    margin: 0 15px;
 }
 .header__container {
     display: flex;
     background-color: black;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+    justify-content: space-evenly;
+    padding: 0.7rem 0;
     align-items: center;
 }
 .logo__name{
     color:white;
     font-size: 2rem;
     font-weight: 600;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.bar{
+    display: flex;
+}
+
+box-icon{
+padding: 0 5px 0  0;
+}
+
+.main-new-product {
+    background: url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80") no-repeat;
+    background-size: cover;
+    height: 42vh;
+    width: 100%;
+    background-position: 60% 70%;
+}
+
+.nuevos-productos,.info-new-product,.text-new-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.text-new-product>span:nth-child(1){
+    font-size: 2rem;
+}
+.text-new-product>span{
+    margin: 0.2rem 0;
+    padding: 0 1.1rem;
+}
+.text-new-product>span:nth-child(2){
+    line-height: 1.4rem; 
+}
+
+
+.buttom-new-product>button{
+    padding: 0.4rem 5rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.info-new-product{
+   position: absolute;
+   margin-top: 30rem;
+}
+
+.text-new-product{
+    background:linear-gradient(0deg, #000000 69%, transparent 99%);
+}
+
+.buttom-new-product{
+    padding: 1rem;
+background-color: black;
+width: 100%;
 }

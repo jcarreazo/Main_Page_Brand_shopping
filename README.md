@@ -8,7 +8,7 @@ _Para la construccion de esta pagina se utilizo:_
 
 * [HTML](https://www.w3schools.com/html/default.asp) - Estructura y construcción de la pagina.
 * [CSS](https://www.w3schools.com/css/default.asp) - Estilizado de la pagina.
-* [PugJs](https://pugjs.org/api/getting-started.html) - Pre-procesador para la creación y manejo de paquetes.
+* [PugJs](https://pugjs.org/api/getting-started.html) - Pre-procesador para la creación y manejo de elementos HTML
 
 ## Versionado 📌
 
