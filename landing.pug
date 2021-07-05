@@ -10,6 +10,12 @@ mixin top-colection(Brand,background,button)
 mixin button-basic(content)
     button.button-generic=content
 
+mixin buy-type(title,background,position)
+    .articles-section-container 
+         .articles-section(style=`background: url(${background}) no-repeat;background-size: cover;background-position:${position}`)
+                .articles-shadow
+                span=title
+
 doctype doctype html
 html(lang="en")
     head
@@ -45,7 +51,7 @@ html(lang="en")
             .feature-top-products
                 .text-top-products
                     span OUR TOP COLLECTIONS
-                +top-colection("UX-LG6sssss","https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("UX-LG6","https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
                 +top-colection("UX-LG6","https://images.unsplash.com/photo-1495857000853-fe46c8aefc30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
                 +top-colection("UX-LG6","https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
                 +top-colection("UX-LG6","https://images.unsplash.com/photo-1523268755815-fe7c372a0349?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
@@ -54,10 +60,13 @@ html(lang="en")
                         span.new NEW
                         span.new-title Brand 
                         span.new-subtitle Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        +button-basic("GET YOURS")
-                    
-                    
-        .articulos
+                        +button-basic("GET YOURS")            
+        .articles
+            .articles-title
+                span shop by type 
+            +buy-type("For Men","https://images.unsplash.com/photo-1531891570158-e71b35a485bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","40% 15%")
+            +buy-type("Technologic","https://images.unsplash.com/photo-1514441522986-1a15ae47bd0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80", "40% 82%")
+            +buy-type("For Women","https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80")
         .oferta 
         .contacto
     footer 

@@ -1,6 +1,6 @@
 :root {
     --primary-color: #ed1c25;
-    
+
 }
 
 * {
@@ -104,7 +104,7 @@ box-icon {
     width: 100%;
 }
 
-.feature-top-products{
+.feature-top-products {
     box-sizing: border-box;
     width: 100%;
 }
@@ -116,23 +116,23 @@ box-icon {
     display: flex;
     align-items: flex-end;
     margin: 1.5rem 0.8rem;
-    
+
 }
 
-.text-top-products{
+.text-top-products {
     font-size: 2rem;
     font-weight: 500;
     margin: 4rem 0 3rem 0;
     color: black;
 }
 
-.feature-content{
+.feature-content {
     display: flex;
     flex-direction: column;
     padding: 1rem;
 }
 
-.button-generic{
+.button-generic {
     text-decoration: none;
     padding: 0.4rem 0;
     background-color: var(--primary-color);
@@ -141,19 +141,22 @@ box-icon {
     font-size: 1rem;
     font-weight: 600;
 }
-.feature-content>span{
+
+.feature-content>span {
     font-size: 2rem;
     font-weight: 500;
     margin: 0 0 1.5rem 0;
 }
-.brand-new-info{
+
+.brand-new-info {
     color: white;
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    
+
 }
-.brand-new-product{
+
+.brand-new-product {
     background: url("https://images.unsplash.com/photo-1622434641406-a158123450f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80") no-repeat;
     background-size: cover;
     height: 46vh;
@@ -161,19 +164,59 @@ box-icon {
     align-items: center;
     flex-direction: column;
 }
-.new{
+
+.new {
     color: var(--primary-color);
     font-weight: bold;
     letter-spacing: 6px;
 }
-.new-title{
+
+.new-title {
     font-size: 1.7rem;
     font-weight: 400;
     margin: 0.5rem 0;
 }
 
-.new-subtitle{
-font-weight: 400;
-margin: 0.5rem 0 1rem 0;
-font-size: 1.1rem;
+.new-subtitle {
+    font-weight: 400;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.1rem;
 }
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles-title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 3.5rem 0 1.5rem 0;
+}
+.articles-section-container{
+    width: 100%;
+}
+
+.articles-section{
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    .articles-section>span{
+        font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    }
+    .articles-shadow{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.445);
+    height: 23vh;
+    
+}
+
