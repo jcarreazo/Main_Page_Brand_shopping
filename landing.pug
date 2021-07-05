@@ -1,6 +1,15 @@
 mixin box-icon(name,color)
     box-icon(name=name color=color size="28px")&attributes(attributes)
 
+mixin top-colection(Brand,background,button)
+    .feature-top-product(style=`background: url(${background}) no-repeat;background-size: cover;`)
+                    .feature-content   
+                        span=Brand
+                        +button-basic(button)
+
+mixin button-basic(content)
+    button.button-generic=content
+
 doctype doctype html
 html(lang="en")
     head
@@ -9,7 +18,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Main Page 
         link(rel="stylesheet", href="/style.css")
-        script(src="https://unpkg.com/boxicons@latest/dist/boxicons.js") 
+        script(src="https://unpkg.com/boxicons@latest/dist/boxicons.js")
         link(rel="preconnect", href="https://fonts.gstatic.com")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
     body 
@@ -25,15 +34,29 @@ html(lang="en")
                     +box-icon("user","white")
                     +box-icon("shopping-bag-alt","white")(type="solid")
     main 
-        .nuevos-productos
+        .top-products
             .main-new-product
             .info-new-product 
                 .text-new-product
                     span DX VINTAGE'S 41MM
                     span Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est ipsa corporis.
                 .buttom-new-product
-                    button GET YOURS
-
+                    a(href="http://", target="_blank", rel="noopener noreferrer")   GET YOURS
+            .feature-top-products
+                .text-top-products
+                    span OUR TOP COLLECTIONS
+                +top-colection("UX-LG6sssss","https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("UX-LG6","https://images.unsplash.com/photo-1495857000853-fe46c8aefc30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("UX-LG6","https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("UX-LG6","https://images.unsplash.com/photo-1523268755815-fe7c372a0349?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                .brand-new-product
+                    .brand-new-info
+                        span.new NEW
+                        span.new-title Brand 
+                        span.new-subtitle Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        +button-basic("GET YOURS")
+                    
+                    
         .articulos
         .oferta 
         .contacto
