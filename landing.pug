@@ -8,13 +8,28 @@ mixin top-colection(Brand,background,button)
                         +button-basic(button)
 
 mixin button-basic(content)
-    button.button-generic=content
+    a( href="http://",target="_blank",rel="noopener noreferrer").button-generic=content
 
 mixin buy-type(title,background,position)
     .articles-section-container 
          .articles-section(style=`background: url(${background}) no-repeat;background-size: cover;background-position:${position}`)
                 .articles-shadow
                 span=title
+
+mixin new-product(background,top,title,subtitle,button,padding1,padding2,space,bposition)
+    .brand-new-product(style=`background: url(${background}) no-repeat;background-size: cover;padding:${padding1} 0 ${padding2} 0;background-position: ${bposition} 10%;`)
+        .brand-new-info
+            span.new(style=`letter-spacing: ${space};`)=top
+            span.new-title=title  
+            span.new-subtitle=subtitle 
+            +button-basic(button)    
+
+mixin gift(background,title,subtitle,button)
+   .gift-container(style=`background: url(${background}) no-repeat;background-size: cover;background-position: 40% 70%;`)   
+                .gift-info
+                    span.new-title=title  
+                    span.new-subtitle=subtitle 
+                    +button-basic(button) 
 
 doctype doctype html
 html(lang="en")
@@ -23,7 +38,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Main Page 
-        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="/style.css")
         script(src="https://unpkg.com/boxicons@latest/dist/boxicons.js")
         link(rel="preconnect", href="https://fonts.gstatic.com")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
@@ -34,7 +49,7 @@ html(lang="en")
                     +box-icon("menu","white")(size="35px")
                     +box-icon("search","white")
                 .logo
-                    img(src="img/Logo.svg", alt="logo", srcset="")
+                    img(src="/img/Logo.svg", alt="logo", srcset="")
                     span.logo__name EXA
                 .bag
                     +box-icon("user","white")
@@ -51,23 +66,20 @@ html(lang="en")
             .feature-top-products
                 .text-top-products
                     span OUR TOP COLLECTIONS
-                +top-colection("UX-LG6","https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
-                +top-colection("UX-LG6","https://images.unsplash.com/photo-1495857000853-fe46c8aefc30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
-                +top-colection("UX-LG6","https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
-                +top-colection("UX-LG6","https://images.unsplash.com/photo-1523268755815-fe7c372a0349?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
-                .brand-new-product
-                    .brand-new-info
-                        span.new NEW
-                        span.new-title Brand 
-                        span.new-subtitle Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        +button-basic("GET YOURS")            
+                +top-colection("SX-LR1","https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("UX-FD3","https://images.unsplash.com/photo-1495857000853-fe46c8aefc30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("LS-QR3","https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +top-colection("OZ-SX2","https://images.unsplash.com/photo-1523268755815-fe7c372a0349?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","EXPLORE")
+                +new-product("https://images.unsplash.com/photo-1622434641406-a158123450f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80","NEW","Brand","Lorem ipsum dolor, sit amet consectetur adipisicing elit.","GET YOURS")
         .articles
             .articles-title
                 span shop by type 
             +buy-type("For Men","https://images.unsplash.com/photo-1531891570158-e71b35a485bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80","40% 15%")
             +buy-type("Technologic","https://images.unsplash.com/photo-1514441522986-1a15ae47bd0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80", "40% 82%")
             +buy-type("For Women","https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80")
-        .oferta 
+            +new-product("https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80","FORTH ANNIVERSARY SPECIAL","Z-30 Bussiness Boss", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi, ducimus vel fuga nam pariatur","GET TI NOW","1rem","6rem","0px","35%")
+        .oferta
+            +gift("https://images.unsplash.com/photo-1544639044-4f142ceb6a2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80","The gift of choice","Take the guesswork out of gifting with a pick that never goes out of style.","shop gift cards")
         .contacto
     footer 
         .footer__container

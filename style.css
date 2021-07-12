@@ -133,6 +133,7 @@ box-icon {
 }
 
 .button-generic {
+    text-transform: uppercase;
     text-decoration: none;
     padding: 0.4rem 0;
     background-color: var(--primary-color);
@@ -157,12 +158,12 @@ box-icon {
 }
 
 .brand-new-product {
-    background: url("https://images.unsplash.com/photo-1622434641406-a158123450f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80") no-repeat;
-    background-size: cover;
     height: 46vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    margin: 2rem 0;
 }
 
 .new {
@@ -193,7 +194,7 @@ box-icon {
     font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
-    margin: 3.5rem 0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
 }
 .articles-section-container{
     width: 100%;
@@ -220,3 +221,16 @@ box-icon {
     
 }
 
+.gift-info{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+ 
+}
+.gift-container{
+    text-align: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-position: 35% 10%;
+}
